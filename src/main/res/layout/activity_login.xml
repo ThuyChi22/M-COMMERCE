@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:layout_weight="1"
+        app:srcCompat="@mipmap/ic_logo_login" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:layout_weight="1"
+        android:text="@string/title_login_user_name"
+        android:textSize="14sp"
+        tools:text="User name:" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter username:" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/title_login_password"
+        tools:text="Password:" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/title_login_password"
+        android:text="@string/edtPassword" />
+
+    <CheckBox
+        android:id="@+id/chkSaveLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/title_login_save_login_info"
+        tools:text="Save Login Infor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="do_login"
+            android:id="@+id/loginbutton"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_login_login_button"
+            tools:text="Login" />
+
+        <ImageView
+
+            android:onClick="do_exit"
+            android:id="@+id/closeicon"
+            android:layout_width="190dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/ic_close_login" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+</LinearLayout>
