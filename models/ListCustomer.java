@@ -8,17 +8,21 @@ public class ListCustomer implements Serializable {
     private ArrayList<Customer>customers;
 
     public ListCustomer() {
+        customers=new ArrayList<>();
     }
 
     public ListCustomer(ArrayList<Customer> customers) {
+
         this.customers = customers;
     }
 
     public ArrayList<Customer> getCustomers() {
+
         return customers;
     }
 
     public void setCustomers(ArrayList<Customer> customers) {
+
         this.customers = customers;
     }
     public void addCustomer(Customer c){
@@ -46,12 +50,19 @@ public class ListCustomer implements Serializable {
             }
             Customer c=new Customer(id, name, email,phone,username,password);
             addCustomer(c);
-
-
-
-
-
-
         }
     }
-}
+
+    public boolean isExist(Customer c)
+    {
+        for (Customer cus : customers)
+        {
+            if (cus.getId() == c.getId() ||
+                    cus.getPhone().equals(c.getPhone())||
+                    cus.getEmail().equalsIgnoreCase(c.getEmail())||
+                    cus.getUsername().equalsIgnoreCase(c.getUsername())
+            )
+                return true;
+        }
+        return false;
+    }}

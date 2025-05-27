@@ -1,13 +1,19 @@
 package com.tranduythanh.k22411csampleproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -71,5 +77,26 @@ public class ProductManagementActivity extends AppCompatActivity {
         adapterProduct=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         lvProduct.setAdapter(adapterProduct);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.option_menu_product,menu);
+        return true;    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.menu_new_product){
+            Toast.makeText(ProductManagementActivity.this,"Mở màn hình thêm mới sản phẩm",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(ProductManagementActivity.this, CustomerDetailMainActivity.class);
+            startActivity(intent);
+
+        }
+        else if (item.getItemId()==R.id.menu_help) {
+            Toast.makeText(ProductManagementActivity.this,"Mở website hướng dẫn suwr dụng",Toast.LENGTH_LONG).show();
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

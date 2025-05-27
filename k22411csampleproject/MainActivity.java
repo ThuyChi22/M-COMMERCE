@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     TextView txtCustomer;
     ImageView imgproduct;
     TextView txtproduct;
+    ImageView imgadvancedproduct;
+    TextView txtadvancedproduct;
     
 
     @Override
@@ -88,7 +90,27 @@ public class MainActivity extends AppCompatActivity {
                 openProductManagementActivity();
             }
         });
+        imgadvancedproduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdvancedProductManagementActivity();
+            }
+        });
+        txtadvancedproduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdvancedProductManagementActivity
+                        ();
+            }
+        });
     }
+
+    private void openAdvancedProductManagementActivity() {
+        Intent intent=new Intent(MainActivity.this, AdvanceProductManagementActivity.class);
+        startActivity(intent);
+    }
+
+
     void openEmployeeManagementActivity()
     {
         Intent intent=new Intent(MainActivity.this, EmployeeManagementActivity.class);
