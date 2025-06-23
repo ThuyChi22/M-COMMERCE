@@ -1,0 +1,63 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvCreateTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a New Task"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <EditText
+            android:id="@+id/etTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Task Title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign to (Employee):" />
+
+        <Spinner
+            android:id="@+id/spinnerEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Phone Numbers:"
+            android:background="#FFFF00"
+            android:padding="4dp" />
+
+        <Button
+            android:id="@+id/btnSelectCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Customers to Call" />
+
+        <ListView
+            android:id="@+id/lvCustomerPhones"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:dividerHeight="1dp" />
+
+        <Button
+            android:id="@+id/btnCreateTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Task"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

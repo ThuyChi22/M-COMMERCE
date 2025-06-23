@@ -1,95 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="149dp"
-        android:layout_weight="1"
-        app:srcCompat="@mipmap/ic_logo_login" />
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F9F9F9">
 
     <TextView
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="9dp"
-        android:layout_weight="1"
-        android:text="@string/title_login_user_name"
-        android:textSize="14sp"
-        tools:text="User name:" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
+        android:hint="Username"
         android:inputType="text"
-        android:text="Enter username:" />
-
-    <TextView
-        android:id="@+id/Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/title_login_password"
-        tools:text="Password:" />
+        android:layout_marginBottom="12dp" />
 
     <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="17dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="@string/title_login_password"
-        android:text="@string/edtPassword" />
-
-    <CheckBox
-        android:id="@+id/chkSaveLogin"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/title_login_save_login_info"
-        tools:text="Save Login Infor" />
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="12dp" />
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/radioRole"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
 
-        <Button
-            android:onClick="do_login"
-            android:id="@+id/loginbutton"
-            android:layout_width="293dp"
+        <RadioButton
+            android:id="@+id/radioAdmin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/title_login_login_button"
-            tools:text="Login" />
+            android:text="Admin" />
 
-        <ImageView
+        <RadioButton
+            android:id="@+id/radioEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employee" />
+    </RadioGroup>
 
-            android:onClick="do_exit"
-            android:id="@+id/closeicon"
-            android:layout_width="190dp"
-            android:layout_height="53dp"
-            android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_close_login" />
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/editTextText"
+    <Button
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
-
+        android:text="Login"
+        android:backgroundTint="#6200EE"
+        android:textColor="@android:color/white" />
 </LinearLayout>

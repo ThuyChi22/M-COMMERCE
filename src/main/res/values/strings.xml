@@ -1,17 +1,3 @@
 <resources>
-    <string name="app_name">K22411CSampleProject</string>
-    <string name="title_login_user_name" />
-    <string name="title_loginuser_name_hint" />
-    <string name="title_login_password" />
-    <string name="title_login_save_login_info" />
-    <string name="title_login_login_button" />
-    <string name="edtPassword" />
-    <string name="title_login_enterusername" />
-    <string name="confirm_exit_title">Exit confirmation</string>
-    <string name="confirm_exit_message">Are you sure to want to exit?</string>
-    <string name="confirm_exit_Yes">Yes</string>
-    <string name="confirm_exit_No">No</string>
-    <string name="title_employee">Employee\n</string>
-    <string name="title_customer">Customer\n</string>
-    <string name="title_customerr">Customer</string>
+    <string name="app_name">NguyenThuyChi-K22411C-K224111445</string>
 </resources>
